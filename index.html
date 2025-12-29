@@ -1,302 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>DoramaFlix — Assista Agora</title>
+<meta charset="UTF-8">
+<title>DoramaFlix — Doramas em Alta</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Os doramas mais viciantes do momento. Romance, drama e emoção em um só lugar." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Os doramas mais viciantes do momento. Romance, drama e emoção em um só lugar.">
 
-  <!-- FAVICON -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- META PIXEL -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1185501506821730');
-    fbq('track', 'PageView');
-  </script>
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1185501506821730');
+fbq('track','PageView');
+</script>
 </head>
 
 <body>
 
-  <header class="header">
-    <h1>Os Doramas Mais Viciantes do Momento</h1>
-    <p>Romance, drama e emoção em um só lugar</p>
-
-    <div class="badge-top">🔥 Atualizado diariamente • Acesso VIP</div>
-    <div class="trust">⭐ Comunidade ativa • ⚡ Acesso imediato</div>
-  </header>
-
-  <div class="divider-glow"></div>
-
-  <main class="grid">
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-01.jpg" alt="Dorama 01" />
-      <h3>Dorama 01</h3>
-      <button onclick="acessar('Dorama 01')">Assistir agora</button>
+<header class="top">
+  <div class="top-inner">
+    <h1>Doramas em Alta 🔥</h1>
+    <p>Romance • Drama • Emoção • Maratona liberada</p>
+    <div class="badges">
+      <span>⭐ Atualizado diariamente</span>
+      <span>⚡ Acesso imediato</span>
+      <span>🔥 Conteúdo VIP</span>
     </div>
+  </div>
+</header>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-02.jpg" alt="Dorama 02" />
-      <h3>Dorama 02</h3>
-      <button onclick="acessar('Dorama 02')">Assistir agora</button>
-    </div>
+<section class="notice">
+  <p>Assista onde quiser • Celular • Tablet • Computador</p>
+</section>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-03.jpg" alt="Dorama 03" />
-      <h3>Dorama 03</h3>
-      <button onclick="acessar('Dorama 03')">Assistir agora</button>
-    </div>
+<main class="grid">
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-04.jpg" alt="Dorama 04" />
-      <h3>Dorama 04</h3>
-      <button onclick="acessar('Dorama 04')">Assistir agora</button>
-    </div>
+<div class="card"><img src="images/dorama-01.jpg"><div class="overlay"><h3>Dorama 01</h3><button onclick="acessar('Dorama 01')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-02.jpg"><div class="overlay"><h3>Dorama 02</h3><button onclick="acessar('Dorama 02')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-03.jpg"><div class="overlay"><h3>Dorama 03</h3><button onclick="acessar('Dorama 03')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-04.jpg"><div class="overlay"><h3>Dorama 04</h3><button onclick="acessar('Dorama 04')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-05.jpg"><div class="overlay"><h3>Dorama 05</h3><button onclick="acessar('Dorama 05')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-06.jpg"><div class="overlay"><h3>Dorama 06</h3><button onclick="acessar('Dorama 06')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-07.jpg"><div class="overlay"><h3>Dorama 07</h3><button onclick="acessar('Dorama 07')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-08.jpg"><div class="overlay"><h3>Dorama 08</h3><button onclick="acessar('Dorama 08')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-09.jpg"><div class="overlay"><h3>Dorama 09</h3><button onclick="acessar('Dorama 09')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-10.jpg"><div class="overlay"><h3>Dorama 10</h3><button onclick="acessar('Dorama 10')">Assistir agora</button></div></div>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-05.jpg" alt="Dorama 05" />
-      <h3>Dorama 05</h3>
-      <button onclick="acessar('Dorama 05')">Assistir agora</button>
-    </div>
+<div class="card"><img src="images/dorama-11.jpg"><div class="overlay"><h3>Dorama 11</h3><button onclick="acessar('Dorama 11')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-12.jpg"><div class="overlay"><h3>Dorama 12</h3><button onclick="acessar('Dorama 12')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-13.jpg"><div class="overlay"><h3>Dorama 13</h3><button onclick="acessar('Dorama 13')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-14.jpg"><div class="overlay"><h3>Dorama 14</h3><button onclick="acessar('Dorama 14')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-15.jpg"><div class="overlay"><h3>Dorama 15</h3><button onclick="acessar('Dorama 15')">Assistir agora</button></div></div>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-06.jpg" alt="Dorama 06" />
-      <h3>Dorama 06</h3>
-      <button onclick="acessar('Dorama 06')">Assistir agora</button>
-    </div>
+<div class="card"><img src="images/dorama-16.jpg"><div class="overlay"><h3>Dorama 16</h3><button onclick="acessar('Dorama 16')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-17.jpg"><div class="overlay"><h3>Dorama 17</h3><button onclick="acessar('Dorama 17')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-18.jpg"><div class="overlay"><h3>Dorama 18</h3><button onclick="acessar('Dorama 18')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-19.jpg"><div class="overlay"><h3>Dorama 19</h3><button onclick="acessar('Dorama 19')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-20.jpg"><div class="overlay"><h3>Dorama 20</h3><button onclick="acessar('Dorama 20')">Assistir agora</button></div></div>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-07.jpg" alt="Dorama 07" />
-      <h3>Dorama 07</h3>
-      <button onclick="acessar('Dorama 07')">Assistir agora</button>
-    </div>
+<div class="card"><img src="images/dorama-21.jpg"><div class="overlay"><h3>Dorama 21</h3><button onclick="acessar('Dorama 21')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-22.jpg"><div class="overlay"><h3>Dorama 22</h3><button onclick="acessar('Dorama 22')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-23.jpg"><div class="overlay"><h3>Dorama 23</h3><button onclick="acessar('Dorama 23')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-24.jpg"><div class="overlay"><h3>Dorama 24</h3><button onclick="acessar('Dorama 24')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-25.jpg"><div class="overlay"><h3>Dorama 25</h3><button onclick="acessar('Dorama 25')">Assistir agora</button></div></div>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-08.jpg" alt="Dorama 08" />
-      <h3>Dorama 08</h3>
-      <button onclick="acessar('Dorama 08')">Assistir agora</button>
-    </div>
+<div class="card"><img src="images/dorama-26.jpg"><div class="overlay"><h3>Dorama 26</h3><button onclick="acessar('Dorama 26')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-27.jpg"><div class="overlay"><h3>Dorama 27</h3><button onclick="acessar('Dorama 27')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-28.jpg"><div class="overlay"><h3>Dorama 28</h3><button onclick="acessar('Dorama 28')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-29.jpg"><div class="overlay"><h3>Dorama 29</h3><button onclick="acessar('Dorama 29')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-30.jpg"><div class="overlay"><h3>Dorama 30</h3><button onclick="acessar('Dorama 30')">Assistir agora</button></div></div>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-09.jpg" alt="Dorama 09" />
-      <h3>Dorama 09</h3>
-      <button onclick="acessar('Dorama 09')">Assistir agora</button>
-    </div>
+<div class="card"><img src="images/dorama-31.jpg"><div class="overlay"><h3>Dorama 31</h3><button onclick="acessar('Dorama 31')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-32.jpg"><div class="overlay"><h3>Dorama 32</h3><button onclick="acessar('Dorama 32')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-33.jpg"><div class="overlay"><h3>Dorama 33</h3><button onclick="acessar('Dorama 33')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-34.jpg"><div class="overlay"><h3>Dorama 34</h3><button onclick="acessar('Dorama 34')">Assistir agora</button></div></div>
+<div class="card"><img src="images/dorama-35.jpg"><div class="overlay"><h3>Dorama 35</h3><button onclick="acessar('Dorama 35')">Assistir agora</button></div></div>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-10.jpg" alt="Dorama 10" />
-      <h3>Dorama 10</h3>
-      <button onclick="acessar('Dorama 10')">Assistir agora</button>
-    </div>
+</main>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-11.jpg" alt="Dorama 11" />
-      <h3>Dorama 11</h3>
-      <button onclick="acessar('Dorama 11')">Assistir agora</button>
-    </div>
+<div id="liveNotification" class="live-notification"></div>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-12.jpg" alt="Dorama 12" />
-      <h3>Dorama 12</h3>
-      <button onclick="acessar('Dorama 12')">Assistir agora</button>
-    </div>
+<footer class="footer">
+  <p>© 2025 • DoramaFlix • Todos os direitos reservados</p>
+</footer>
 
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-13.jpg" alt="Dorama 13" />
-      <h3>Dorama 13</h3>
-      <button onclick="acessar('Dorama 13')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-14.jpg" alt="Dorama 14" />
-      <h3>Dorama 14</h3>
-      <button onclick="acessar('Dorama 14')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-15.jpg" alt="Dorama 15" />
-      <h3>Dorama 15</h3>
-      <button onclick="acessar('Dorama 15')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-16.jpg" alt="Dorama 16" />
-      <h3>Dorama 16</h3>
-      <button onclick="acessar('Dorama 16')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-17.jpg" alt="Dorama 17" />
-      <h3>Dorama 17</h3>
-      <button onclick="acessar('Dorama 17')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-18.jpg" alt="Dorama 18" />
-      <h3>Dorama 18</h3>
-      <button onclick="acessar('Dorama 18')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-19.jpg" alt="Dorama 19" />
-      <h3>Dorama 19</h3>
-      <button onclick="acessar('Dorama 19')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-20.jpg" alt="Dorama 20" />
-      <h3>Dorama 20</h3>
-      <button onclick="acessar('Dorama 20')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-21.jpg" alt="Dorama 21" />
-      <h3>Dorama 21</h3>
-      <button onclick="acessar('Dorama 21')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-22.jpg" alt="Dorama 22" />
-      <h3>Dorama 22</h3>
-      <button onclick="acessar('Dorama 22')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-23.jpg" alt="Dorama 23" />
-      <h3>Dorama 23</h3>
-      <button onclick="acessar('Dorama 23')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-24.jpg" alt="Dorama 24" />
-      <h3>Dorama 24</h3>
-      <button onclick="acessar('Dorama 24')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-25.jpg" alt="Dorama 25" />
-      <h3>Dorama 25</h3>
-      <button onclick="acessar('Dorama 25')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-26.jpg" alt="Dorama 26" />
-      <h3>Dorama 26</h3>
-      <button onclick="acessar('Dorama 26')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-27.jpg" alt="Dorama 27" />
-      <h3>Dorama 27</h3>
-      <button onclick="acessar('Dorama 27')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-28.jpg" alt="Dorama 28" />
-      <h3>Dorama 28</h3>
-      <button onclick="acessar('Dorama 28')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-29.jpg" alt="Dorama 29" />
-      <h3>Dorama 29</h3>
-      <button onclick="acessar('Dorama 29')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-30.jpg" alt="Dorama 30" />
-      <h3>Dorama 30</h3>
-      <button onclick="acessar('Dorama 30')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-31.jpg" alt="Dorama 31" />
-      <h3>Dorama 31</h3>
-      <button onclick="acessar('Dorama 31')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-32.jpg" alt="Dorama 32" />
-      <h3>Dorama 32</h3>
-      <button onclick="acessar('Dorama 32')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-33.jpg" alt="Dorama 33" />
-      <h3>Dorama 33</h3>
-      <button onclick="acessar('Dorama 33')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-34.jpg" alt="Dorama 34" />
-      <h3>Dorama 34</h3>
-      <button onclick="acessar('Dorama 34')">Assistir agora</button>
-    </div>
-
-    <div class="card">
-      <span class="tag">VIP</span>
-      <img src="images/dorama-35.jpg" alt="Dorama 35" />
-      <h3>Dorama 35</h3>
-      <button onclick="acessar('Dorama 35')">Assistir agora</button>
-    </div>
-  </main>
-
-  <div id="liveNotification" class="live-notification" aria-live="polite"></div>
-
-  <footer class="footer">
-    <p>© 2025 • DoramaFlix</p>
-  </footer>
-
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
