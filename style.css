@@ -26,7 +26,6 @@ body {
 .header h1 {
   font-size: 2.2rem;
   font-weight: 800;
-  letter-spacing: -0.4px;
   margin: 0 0 10px;
 }
 
@@ -79,25 +78,30 @@ body {
   background: linear-gradient(180deg, #14142a, #0c0c1b);
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(255,255,255,0.04);
-  transition: transform .45s ease, box-shadow .45s ease;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.7),
+    inset 0 0 0 1px rgba(255,255,255,0.04);
+  transition: transform .4s ease, box-shadow .4s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-8px);
   box-shadow:
     0 30px 80px rgba(124,77,255,0.22),
     0 20px 60px rgba(0,242,255,0.14),
     inset 0 0 0 1px rgba(255,255,255,0.05);
 }
 
+/* IMAGEM — CORREÇÃO DEFINITIVA (SEM CORTAR) */
 .card img {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  height: 260px;              /* mantém padrão do card */
+  object-fit: contain;        /* NÃO corta a imagem */
+  background-color: #0a0a16;  /* fundo elegante quando sobra espaço */
   display: block;
 }
 
+/* TEXTO */
 .card h3 {
   padding: 16px 16px 6px;
   font-size: 15px;
@@ -120,56 +124,31 @@ body {
   backdrop-filter: blur(6px);
 }
 
-/* BOTÃO NEON */
+/* BOTÃO */
 .card button {
   width: calc(100% - 32px);
   margin: 16px;
   padding: 15px 12px;
-
   border: none;
   border-radius: 16px;
-
   background: linear-gradient(135deg, #7c4dff, #00f2ff);
   color: #020204;
-
   font-weight: 900;
   font-size: 0.9rem;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-
   cursor: pointer;
-
   box-shadow:
     0 0 14px rgba(124,77,255,0.55),
     0 0 32px rgba(0,242,255,0.35);
-
-  animation: pulseNeon 2.8s infinite;
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .card button:hover {
-  transform: scale(1.06);
+  transform: scale(1.05);
   box-shadow:
     0 0 22px rgba(124,77,255,0.9),
     0 0 55px rgba(0,242,255,0.75);
-}
-
-@keyframes pulseNeon {
-  0% {
-    box-shadow:
-      0 0 12px rgba(124,77,255,0.45),
-      0 0 26px rgba(0,242,255,0.25);
-  }
-  50% {
-    box-shadow:
-      0 0 22px rgba(124,77,255,0.85),
-      0 0 55px rgba(0,242,255,0.70);
-  }
-  100% {
-    box-shadow:
-      0 0 12px rgba(124,77,255,0.45),
-      0 0 26px rgba(0,242,255,0.25);
-  }
 }
 
 /* NOTIFICAÇÃO */
@@ -178,17 +157,13 @@ body {
   bottom: 20px;
   left: 20px;
   max-width: 320px;
-
   padding: 14px 18px;
   border-radius: 14px;
-
   background: rgba(15,15,30,0.95);
   color: #ffffff;
   font-size: 0.85rem;
-
   border: 1px solid rgba(255,255,255,0.06);
   box-shadow: 0 0 25px rgba(124,77,255,0.6);
-
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .35s ease, transform .35s ease;
@@ -208,7 +183,7 @@ body {
   font-size: 0.85rem;
 }
 
-/* MOBILE (ANTI “REELS”) */
+/* MOBILE — SEM EFEITO “REELS” */
 @media (max-width: 768px) {
   .grid {
     gap: 22px;
@@ -219,14 +194,8 @@ body {
     height: 220px;
   }
 
-  /* remove sensação de “feed agressivo” no touch */
   .card:hover {
     transform: none;
-  }
-
-  /* menos “ansiedade visual” no mobile */
-  .card button {
-    animation: none;
   }
 
   .live-notification {
