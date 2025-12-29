@@ -10,7 +10,7 @@ function acessar(nomeDorama) {
   window.open(LINK_ACESSO, "_blank");
 }
 
-// NOTIFICAÇÕES DINÂMICAS (ALEATÓRIO DE VERDADE)
+/* NOTIFICAÇÕES DINÂMICAS (ALEATÓRIO REAL) */
 const mensagens = [
   "👀 {n} pessoas assistindo agora",
   "🔥 {n} fãs maratonando neste momento",
@@ -39,12 +39,13 @@ function mostrarNotificacao() {
   }, 4200);
 }
 
-// agenda com tempo diferente a cada vez (não fica sempre igual)
 function agendarProxima() {
   mostrarNotificacao();
   const proximoEmMs = rand(5000, 9000);
   setTimeout(agendarProxima, proximoEmMs);
 }
 
-// inicia depois de um pequeno delay
-setTimeout(agendarProxima, rand(1200, 2500));
+/* start */
+setTimeout(() => {
+  agendarProxima();
+}, rand(1200, 2500));
