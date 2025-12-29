@@ -84,20 +84,12 @@ body {
   transition: transform .4s ease, box-shadow .4s ease;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow:
-    0 30px 80px rgba(124,77,255,0.22),
-    0 20px 60px rgba(0,242,255,0.14),
-    inset 0 0 0 1px rgba(255,255,255,0.05);
-}
-
-/* IMAGEM — CORREÇÃO DEFINITIVA (SEM CORTAR) */
+/* IMAGEM — DESKTOP */
 .card img {
   width: 100%;
-  height: 260px;              /* mantém padrão do card */
-  object-fit: contain;        /* NÃO corta a imagem */
-  background-color: #0a0a16;  /* fundo elegante quando sobra espaço */
+  height: 260px;
+  object-fit: contain;
+  background-color: #0a0a16;
   display: block;
 }
 
@@ -138,17 +130,6 @@ body {
   letter-spacing: 0.6px;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow:
-    0 0 14px rgba(124,77,255,0.55),
-    0 0 32px rgba(0,242,255,0.35);
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.card button:hover {
-  transform: scale(1.05);
-  box-shadow:
-    0 0 22px rgba(124,77,255,0.9),
-    0 0 55px rgba(0,242,255,0.75);
 }
 
 /* NOTIFICAÇÃO */
@@ -183,15 +164,21 @@ body {
   font-size: 0.85rem;
 }
 
-/* MOBILE — SEM EFEITO “REELS” */
+/* 🔥 MOBILE — CORREÇÃO DEFINITIVA (NÃO CORTA) */
 @media (max-width: 768px) {
+
   .grid {
     gap: 22px;
     padding: 20px;
   }
 
+  /* aqui está a correção REAL */
   .card img {
-    height: 220px;
+    height: auto;              /* deixa a imagem mandar */
+    max-height: 320px;         /* limite visual elegante */
+    aspect-ratio: 2 / 3;       /* padrão de capa */
+    object-fit: contain;       /* nunca corta */
+    background-color: #0a0a16;
   }
 
   .card:hover {
