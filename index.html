@@ -2,99 +2,211 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>DoramaFlix — Doramas em Alta</title>
-
+<title>Novelinha Asiática • Histórias que Prendem</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Os doramas mais viciantes do momento. Romance, drama e emoção em um só lugar.">
+<meta name="description" content="Histórias asiáticas emocionantes que prendem do começo ao fim.">
 
 <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
+<!-- FACEBOOK PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+ if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+ if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+ n.queue=[];t=b.createElement(e);t.async=!0;
+ t.src=v;s=b.getElementsByTagName(e)[0];
+ s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1185501506821730');
 fbq('track','PageView');
 </script>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#050512,#0a0a1a);
+  color:#fff;
+}
+
+header{
+  text-align:center;
+  padding:34px 20px;
+}
+
+header h1{
+  font-size:2rem;
+  margin-bottom:8px;
+  text-shadow:0 0 14px rgba(180,120,255,.6);
+}
+
+header p{
+  color:#cfcfe6;
+  font-size:1rem;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:18px;
+  padding:20px;
+  max-width:1300px;
+  margin:auto;
+}
+
+.card{
+  aspect-ratio:9/16;
+  border-radius:16px;
+  overflow:hidden;
+  cursor:pointer;
+  background:#000;
+  box-shadow:0 18px 50px rgba(0,0,0,.6);
+}
+
+.card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  background:rgba(0,0,0,.88);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal.show{display:flex}
+
+.modal-box{
+  width:92%;
+  max-width:420px;
+  background:#0c0c1c;
+  border-radius:18px;
+  padding:14px;
+}
+
+.modal-box img{
+  width:100%;
+  border-radius:12px;
+  max-height:70vh;
+  object-fit:contain;
+}
+
+.modal-box h2{
+  font-size:1rem;
+  margin:10px 0;
+  text-align:center;
+}
+
+.modal-box button{
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#a855f7,#22d3ee);
+  color:#000;
+  font-weight:bold;
+  font-size:.95rem;
+  cursor:pointer;
+  box-shadow:0 0 22px rgba(168,85,247,.6);
+}
+
+.close{
+  text-align:center;
+  margin-top:8px;
+  font-size:.8rem;
+  color:#aaa;
+  cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
-<header class="top">
-  <div class="top-inner">
-    <h1>Doramas em Alta 🔥</h1>
-    <p>Romance • Drama • Emoção • Maratona liberada</p>
-    <div class="badges">
-      <span>⭐ Atualizado diariamente</span>
-      <span>⚡ Acesso imediato</span>
-      <span>🔥 Conteúdo VIP</span>
-    </div>
-  </div>
+<header>
+  <h1>Novelinha Asiática ✨</h1>
+  <p>Histórias que prendem do começo ao fim</p>
 </header>
 
-<section class="notice">
-  <p>Assista onde quiser • Celular • Tablet • Computador</p>
+<section class="grid">
+  <!-- 35 CARDS -->
+  <div class="card" onclick="openModal('images/dorama-01.jpg')"><img src="images/dorama-01.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-02.jpg')"><img src="images/dorama-02.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-03.jpg')"><img src="images/dorama-03.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-04.jpg')"><img src="images/dorama-04.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-05.jpg')"><img src="images/dorama-05.jpg"></div>
+
+  <div class="card" onclick="openModal('images/dorama-06.jpg')"><img src="images/dorama-06.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-07.jpg')"><img src="images/dorama-07.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-08.jpg')"><img src="images/dorama-08.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-09.jpg')"><img src="images/dorama-09.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-10.jpg')"><img src="images/dorama-10.jpg"></div>
+
+  <div class="card" onclick="openModal('images/dorama-11.jpg')"><img src="images/dorama-11.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-12.jpg')"><img src="images/dorama-12.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-13.jpg')"><img src="images/dorama-13.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-14.jpg')"><img src="images/dorama-14.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-15.jpg')"><img src="images/dorama-15.jpg"></div>
+
+  <div class="card" onclick="openModal('images/dorama-16.jpg')"><img src="images/dorama-16.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-17.jpg')"><img src="images/dorama-17.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-18.jpg')"><img src="images/dorama-18.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-19.jpg')"><img src="images/dorama-19.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-20.jpg')"><img src="images/dorama-20.jpg"></div>
+
+  <div class="card" onclick="openModal('images/dorama-21.jpg')"><img src="images/dorama-21.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-22.jpg')"><img src="images/dorama-22.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-23.jpg')"><img src="images/dorama-23.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-24.jpg')"><img src="images/dorama-24.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-25.jpg')"><img src="images/dorama-25.jpg"></div>
+
+  <div class="card" onclick="openModal('images/dorama-26.jpg')"><img src="images/dorama-26.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-27.jpg')"><img src="images/dorama-27.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-28.jpg')"><img src="images/dorama-28.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-29.jpg')"><img src="images/dorama-29.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-30.jpg')"><img src="images/dorama-30.jpg"></div>
+
+  <div class="card" onclick="openModal('images/dorama-31.jpg')"><img src="images/dorama-31.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-32.jpg')"><img src="images/dorama-32.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-33.jpg')"><img src="images/dorama-33.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-34.jpg')"><img src="images/dorama-34.jpg"></div>
+  <div class="card" onclick="openModal('images/dorama-35.jpg')"><img src="images/dorama-35.jpg"></div>
 </section>
 
-<main class="grid">
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <img id="modalImg">
+    <h2>História Asiática</h2>
+    <button onclick="goBuy()">SAIBA MAIS AQUI EMBAIXO</button>
+    <div class="close" onclick="closeModal()">Fechar</div>
+  </div>
+</div>
 
-<div class="card"><img src="images/dorama-01.jpg"><div class="overlay"><h3>Dorama 01</h3><button onclick="acessar('Dorama 01')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-02.jpg"><div class="overlay"><h3>Dorama 02</h3><button onclick="acessar('Dorama 02')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-03.jpg"><div class="overlay"><h3>Dorama 03</h3><button onclick="acessar('Dorama 03')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-04.jpg"><div class="overlay"><h3>Dorama 04</h3><button onclick="acessar('Dorama 04')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-05.jpg"><div class="overlay"><h3>Dorama 05</h3><button onclick="acessar('Dorama 05')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-06.jpg"><div class="overlay"><h3>Dorama 06</h3><button onclick="acessar('Dorama 06')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-07.jpg"><div class="overlay"><h3>Dorama 07</h3><button onclick="acessar('Dorama 07')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-08.jpg"><div class="overlay"><h3>Dorama 08</h3><button onclick="acessar('Dorama 08')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-09.jpg"><div class="overlay"><h3>Dorama 09</h3><button onclick="acessar('Dorama 09')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-10.jpg"><div class="overlay"><h3>Dorama 10</h3><button onclick="acessar('Dorama 10')">Assistir agora</button></div></div>
+<script>
+const LINK_COMPRA = "https://t.me/DoramaFlix_VIPbot";
 
-<div class="card"><img src="images/dorama-11.jpg"><div class="overlay"><h3>Dorama 11</h3><button onclick="acessar('Dorama 11')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-12.jpg"><div class="overlay"><h3>Dorama 12</h3><button onclick="acessar('Dorama 12')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-13.jpg"><div class="overlay"><h3>Dorama 13</h3><button onclick="acessar('Dorama 13')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-14.jpg"><div class="overlay"><h3>Dorama 14</h3><button onclick="acessar('Dorama 14')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-15.jpg"><div class="overlay"><h3>Dorama 15</h3><button onclick="acessar('Dorama 15')">Assistir agora</button></div></div>
+function openModal(img){
+  document.getElementById('modalImg').src = img;
+  document.getElementById('modal').classList.add('show');
+}
 
-<div class="card"><img src="images/dorama-16.jpg"><div class="overlay"><h3>Dorama 16</h3><button onclick="acessar('Dorama 16')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-17.jpg"><div class="overlay"><h3>Dorama 17</h3><button onclick="acessar('Dorama 17')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-18.jpg"><div class="overlay"><h3>Dorama 18</h3><button onclick="acessar('Dorama 18')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-19.jpg"><div class="overlay"><h3>Dorama 19</h3><button onclick="acessar('Dorama 19')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-20.jpg"><div class="overlay"><h3>Dorama 20</h3><button onclick="acessar('Dorama 20')">Assistir agora</button></div></div>
+function closeModal(){
+  document.getElementById('modal').classList.remove('show');
+}
 
-<div class="card"><img src="images/dorama-21.jpg"><div class="overlay"><h3>Dorama 21</h3><button onclick="acessar('Dorama 21')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-22.jpg"><div class="overlay"><h3>Dorama 22</h3><button onclick="acessar('Dorama 22')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-23.jpg"><div class="overlay"><h3>Dorama 23</h3><button onclick="acessar('Dorama 23')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-24.jpg"><div class="overlay"><h3>Dorama 24</h3><button onclick="acessar('Dorama 24')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-25.jpg"><div class="overlay"><h3>Dorama 25</h3><button onclick="acessar('Dorama 25')">Assistir agora</button></div></div>
+function goBuy(){
+  if(typeof fbq === 'function'){ fbq('track','Lead'); }
+  window.open(LINK_COMPRA,'_blank');
+}
+</script>
 
-<div class="card"><img src="images/dorama-26.jpg"><div class="overlay"><h3>Dorama 26</h3><button onclick="acessar('Dorama 26')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-27.jpg"><div class="overlay"><h3>Dorama 27</h3><button onclick="acessar('Dorama 27')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-28.jpg"><div class="overlay"><h3>Dorama 28</h3><button onclick="acessar('Dorama 28')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-29.jpg"><div class="overlay"><h3>Dorama 29</h3><button onclick="acessar('Dorama 29')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-30.jpg"><div class="overlay"><h3>Dorama 30</h3><button onclick="acessar('Dorama 30')">Assistir agora</button></div></div>
-
-<div class="card"><img src="images/dorama-31.jpg"><div class="overlay"><h3>Dorama 31</h3><button onclick="acessar('Dorama 31')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-32.jpg"><div class="overlay"><h3>Dorama 32</h3><button onclick="acessar('Dorama 32')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-33.jpg"><div class="overlay"><h3>Dorama 33</h3><button onclick="acessar('Dorama 33')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-34.jpg"><div class="overlay"><h3>Dorama 34</h3><button onclick="acessar('Dorama 34')">Assistir agora</button></div></div>
-<div class="card"><img src="images/dorama-35.jpg"><div class="overlay"><h3>Dorama 35</h3><button onclick="acessar('Dorama 35')">Assistir agora</button></div></div>
-
-</main>
-
-<div id="liveNotification" class="live-notification"></div>
-
-<footer class="footer">
-  <p>© 2025 • DoramaFlix • Todos os direitos reservados</p>
-</footer>
-
-<script src="app.js"></script>
 </body>
 </html>
